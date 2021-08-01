@@ -1,0 +1,167 @@
+.l-player{
+    position:fixed;
+    width:100%;
+    height: 100px;
+    bottom:0px;
+    left:0px;
+    background-color: setColor(tertiary);
+
+    &__content{
+        display:grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.player-content{
+
+    &__hero{
+        display:flex;
+
+        & img{
+            width:100px;
+            height:100%;
+        }
+
+        & div{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left:15px;
+        }
+
+        & p{
+            color: setColor(primary);
+        }
+    }
+
+    &__controls{
+        justify-self: center;
+        display:flex;
+        align-items: center;
+
+        & i{
+            font-size:20.4px;
+            color: setColor(primary);
+            cursor:pointer;
+        }
+
+        & article:nth-child(2){
+            display:flex;
+            justify-content: center;
+            width:60px;
+            position:relative;
+        }
+
+        & .circle{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background-color: setColor(transparent);
+            position:relative;
+            opacity: 0.9;
+        }
+
+        & .circle + i{
+            position: absolute;
+            top:15px;
+            left:23px;
+        }
+        
+    }
+
+    &__volumen{
+        justify-self: end;
+        display:flex;
+        align-items: center;
+        padding-right:15px;
+
+        & i{
+            font-size:20.4px;
+            color: setColor(primary);
+            padding-left:25px;
+        }
+
+        & input[type="range"] {
+            width: 100px;
+            height: 6px;
+            border: 1px solid setColor(primary);
+            border-radius: 5px;
+            -webkit-appearance: none !important;
+            margin-bottom:10px;
+        }
+
+        & input[type="range"]::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: setColor(primary);
+            cursor: pointer;
+            -webkit-appearance: none !important;
+        }
+    }
+}
+
+
+.slider{
+	height: 6px;
+	position: relative;
+	width: 100px;
+    margin-bottom:4px;
+}
+
+.slider > .emptyprogress{
+	border: 3px solid setColor(primary);
+	cursor: pointer;
+	border-radius: 10px;
+	height: 40%;
+	top:25%;
+	position: absolute;
+	width: 100%;
+
+	-webkit-box-shadow: 1px 1px 3px 0px #ccc;
+	box-shadow: 1px 1px 3px 0px #ccc;
+}
+
+.slider > .progress{
+	background: #14aaf6;
+	border: 3px solid white;
+	cursor: pointer;
+	border-radius: 10px;
+	height: 40%;
+	top:25%;
+	position: absolute;
+	width: 0%;
+
+	-webkit-box-shadow: 1px 1px 3px 0px #ccc;
+	box-shadow: 1px 1px 3px 0px #ccc;
+}
+
+.slider > .indicator{
+	background: url('./../../img/admin/foxbel-music-white-icon.png') no-repeat;
+	/*border: 1px solid red;*/
+	cursor: move;
+	height: 100%;
+	margin: 8px auto auto -30px;
+	left: 0%;
+	position: absolute;
+	width:60px;
+}
+
+.info, .info> label > input{
+	font-family: 'Julius Sans One', sans-serif;
+	color: grey;
+}
+
+.info{
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 30px;
+	width: auto;
+}
+
+.info> label > input{
+	border: none;
+	font-size: 20px;
+	width: 250px;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Foxbel Music</title>
+  <base href="/">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+  <!-- Logotipo Browser-->
+  <link rel="icon" type="image/x-icon" href="./assets/img/admin/foxbel-music-icon.png">
+  <!-- Theme -->
+  <meta name="theme-color" content="#E86060">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/2fb25d77eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <foxmu-root>
+
+    <!-- Splash Screen -->
+    <style>
+
+      *{
+          box-sizing: border-box;
+          margin:0;
+          padding:0;
+      }
+
+      .splash {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #662323;
+      }
+
+      img{
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .splash__bold{
+        width: 150px;
+        height: 38px;
+        text-align: center;
+      }
+
+      .splash__bold div{
+        height: 20px;
+        width: 20px;
+        position: relative;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+        text-align: center;
+        margin-left: 10px;
+        animation: pulse 0.6s ease-in-out infinite alternate;
+      }
+
+      .splash__bold div:first-child{
+        -webkit-animation: move 0.6s ease-in-out infinite alternate;
+        animation: move 0.6s ease-in-out infinite alternate;
+        margin-left: 0;
+      }
+
+      .splash__bold div:nth-child(2){
+        -webkit-animation: move 0.6s ease-in-out -0.25s infinite alternate;
+        animation: move 0.6s ease-in-out -0.25s infinite alternate;
+        margin-left: 10px;
+      }
+      
+      .splash__bold div:nth-child(3){
+        -webkit-animation: move 0.6s ease-in-out -0.5s infinite alternate;
+        animation: move 0.6s ease-in-out -0.5s infinite alternate;
+      }
+
+      .splash__bold div:nth-child(4) {
+        -webkit-animation: .6s ease-in-out -.75s infinite alternate move;
+        animation: .6s ease-in-out -.75s infinite alternate move;
+      }
+
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0.4;
+        }
+      }
+
+      @keyframes move{
+        0%{
+          -webkit-transform:translateY(-10px);transform:translateY(-10px)
+        }
+        100%{
+          -webkit-transform:translateY(5px);transform:translateY(5px)
+        }
+      }
+      
+    </style>
+    
+    <div class="splash">
+      <img src="assets/img/admin/foxbel-music-icon.png"/>
+      <article class="splash__bold">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </article>
+    </div>
+
+  </foxmu-root>
+</body>
+</html>

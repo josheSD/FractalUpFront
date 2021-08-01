@@ -1,0 +1,58 @@
+.l-navbar{
+    height: 100px;
+    display:grid;
+    grid-template-columns: 1fr 150px;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    &__search{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+        & form{
+            height: 36px;
+            width: 524px;
+            position:relative;
+        }
+
+        & input{
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            padding-left:15px;
+            padding-right:45px;
+            border:1px solid setColor(border);
+            font-size:18px;
+            font-family: 'Quicksand';
+            background-color: setColor(primary);
+            display:inline-block;
+
+            &::placeholder{
+                color: setColor(search);
+            }
+        }
+
+        & i{
+            position: absolute;
+            top:10px;
+            right:15px;
+            color:setColor(search);
+        }
+    }
+
+    &__user{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display:flex;
+        justify-content: flex-end;
+
+        & span{
+            display:inline-block;
+            padding-left:12px;
+        }
+
+        & i{
+            color: setColor(tertiary)
+        }
+    }
+}

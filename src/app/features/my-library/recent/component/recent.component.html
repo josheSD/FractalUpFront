@@ -1,0 +1,30 @@
+
+<article class="l-recent-hero u-wrapper-two" *ngIf="(music$ | async)?.id">
+    <section class="l-recent-hero__background">
+        <img [src]="(music$ | async)?.artist?.picture_xl" />
+    </section>
+    <section class="l-recent-hero__content">
+        <img [src]="(music$ | async)?.album?.cover_medium" />
+        <aside>
+            <p class="title1">{{ (music$ | async)?.artist?.name }}</p>
+            <p class="paragraph">Lo mejor de {{ (music$ | async)?.artist?.name }} <span>{{ (music$ | async)?.rank }} seguidores</span></p>
+            <p class="small">{{ (music$ | async)?.artist?.name }} (Tottenham, Londres, Inglaterra, 5 de mayo de 1988), conocida simplemente como {{ (music$ | async)?.artist?.name }}, es una cantante, compositora y multinstrumentista británica.8</p>
+            <button class="btn-primary">Reproducir</button>
+            <button class="btn-primary outlet">Seguir</button>
+            <div class="btn-points"></div>
+        </aside>
+    </section>
+</article>
+
+<article class="l-recent-result u-wrapper-two">
+    <h3 class="title2">Resultados: </h3>
+</article>
+
+<article class="l-music u-wrapper">
+    <app-music *ngFor="let music of musics$ | async" [music]="music" ></app-music>
+</article>
+
+<article class="l-loading" *ngIf="musicsLoading$ | async"> 
+    <div><i class="fas fa-sync-alt"></i></div>
+</article>
+

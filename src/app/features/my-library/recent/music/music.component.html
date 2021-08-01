@@ -1,0 +1,8 @@
+<article class="l-cover" (click)="eventSelectMusic()">
+    <div class="l-cover__play"></div>
+    <div class="l-cover__content">
+        <img [src]="music?.album?.cover_medium" />
+        <p class="title3"> {{ music?.title }}</p>
+        <p class="small"> {{ music?.artist?.name }} </p>
+    </div>
+</article>

@@ -1,0 +1,32 @@
+@font-face{
+    font-family: Quicksand;
+    src:url('./../../fonts/Quicksand/Quicksand-Regular.ttf')
+}
+
+body{
+    font-family:var(--main-font), var(--main-alternate-font), var(--main-font-default);
+}
+
+.title1{
+    @include font(title1);
+}
+
+.title2{
+    @include font(title2);
+}
+
+.title3{
+    @include font(title3);
+}
+
+.title4{
+    @include font(title4);
+}
+
+.paragraph{
+    @include font(base);
+}
+
+.small{
+    @include font(small);
+}

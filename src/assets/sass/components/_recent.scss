@@ -1,0 +1,66 @@
+
+.l-recent-hero{
+    height:250px;
+    position:relative;
+
+    &__background{
+        background-color: #C28888;
+        position:relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+
+        & img{
+            width:calc(100% - 250px);
+            opacity: 0.3;
+            margin-left:250px;
+            object-fit: cover;
+        }
+    }
+
+    &__content{
+        position:absolute;
+        height: 100%;
+        top:0px;
+        left:35px;
+        display:flex;
+        color: setColor(primary);
+
+        & img{
+            width:250px;
+            height: 100%;
+        }
+
+        & p.title1{
+            font-weight: bold;
+            margin-top:25px;
+        }
+
+        & p.paragraph{
+            margin-bottom:20px;
+        }
+
+        & p.small{
+            margin-bottom: 25px;
+            padding-right: 50px;
+        }
+
+        & span{
+            color: setColor(rank);
+            font-weight: bold;
+            font-size: 13px;
+            padding-left:15px;
+        }
+
+        & aside{
+            padding: 15px;
+        }
+    }
+}
+
+.l-recent-result{
+    & h3{
+        padding-top:30px;
+        color: setColor(tertiary)
+    }
+}

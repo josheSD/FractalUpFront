@@ -1,0 +1,21 @@
+.l-admin{
+    width:100%;
+    height:100vh;
+    display: grid;
+    grid-template-columns: $sidebar_width 1fr;
+    grid-template-rows: 100%;
+}
+
+.l-sidebar{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: setColor(secondary);
+    position:fixed;
+    height: 100%;
+}
+
+.l-main{
+    grid-column: 2/3;
+    grid-row:1/2;
+    background-color: setColor(primary);
+}

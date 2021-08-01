@@ -1,0 +1,37 @@
+<article class="l-player" *ngIf="(music$ | async)?.id">
+    <div class="l-player__play"></div>
+    <div class="l-player__content">
+        <section class="player-content__hero">
+            <img [src]="(music$ | async)?.album?.cover_medium" />
+            <div>
+                <p>Canción</p>
+                <p class="title3"> {{ (music$ | async)?.artist?.name }} - {{ (music$ | async)?.album?.title }}</p>
+            </div>
+        </section>
+        <section class="player-content__controls">
+            <article>
+                <i class="fas fa-step-backward"></i>
+            </article>
+            <article (click)="eventPlay()">
+                <div class="circle"></div>
+                <i class="fas fa-play"></i>
+            </article>
+            <article>
+                <i class="fas fa-step-forward"></i>
+            </article>
+        </section>
+        <section class="player-content__volumen">
+            <article>
+                
+                <form [formGroup]="form">
+                    <input type="range" min="0" max="100" formControlName="volume"/>
+                </form>
+
+            </article>
+            <article>
+                <i class="fas fa-volume-off"></i>
+            </article>
+        </section>
+    </div>
+</article>
+

@@ -1,0 +1,49 @@
+.btn-primary{
+    border:1px solid setColor(button);
+    background-color: setColor(button);
+    width: 117px;
+    height: 31px;
+    border-radius: 100px;
+    color: setColor(primary);
+    margin-right:20px;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    font-size:14px;
+
+    &.outlet{
+        background-color: transparent;
+        color: setColor(button);
+    }
+}
+
+.btn-points{
+    margin-left:15px;
+    width:4px;
+    height:4px;
+    border-radius: 50%;
+    background-color: setColor(primary);
+    position:relative;
+    display:inline-block;
+
+    &::before{
+        position:absolute;
+        content:'';
+        top:0px;
+        left:-8px;
+        width:4px;
+        height:4px;
+        border-radius: 50%;
+        background-color: setColor(primary);
+    }
+
+    &::after{
+        position:absolute;
+        content:'';
+        top:0px;
+        right:-8px;
+        width:4px;
+        height:4px;
+        border-radius: 50%;
+        background-color: setColor(primary);
+    }
+}

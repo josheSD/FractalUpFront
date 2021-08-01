@@ -1,0 +1,52 @@
+// Custom Properties
+:root{
+    // Variables de apilamiento (z-index)
+    --z-back: -10;
+    --z-intermedio: 5;
+    --z-normal: 10;
+    --z-tooltip:20;
+    --z-fixed: 30;
+    --z-modal: 40;
+
+    --font-size:16px;
+    --main-font:'Quicksand';
+    --main-alternate-font: 'sans-serif';
+    --main-font-default: 'Segoe UI';
+};
+
+// Pensando Movil First    =>  16:9  tiene  (1366 * 768)  - (1920 * 1080) - (1600 * 900)
+$breakpoints: (
+    small: 0px,
+    smedium:375px,
+    medium: 425px,
+    xmedium: 550px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1440px
+);
+
+$fonts:(
+    title1: 25px 35px,
+    title2: 18px 25px,
+    title3: 14px 30px,
+    title4: 13px 24px,
+    base: 14px 24px,
+    small: 12px 22px
+);
+
+$colores: (
+    primary: #fff,
+    secondary:#662323,
+    tertiary: #EB5757,
+    border:#828282,
+    search:#BDBDBD,
+    transparent: #FF7676,
+    rank: #662323,
+    button: #E86060
+);
+
+// Admin
+$sidebar_width:330px;
+$footer_height:60px;
+
+

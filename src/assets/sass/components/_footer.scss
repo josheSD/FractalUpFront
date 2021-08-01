@@ -1,0 +1,18 @@
+.l-footer{
+    width:100%;
+    height:$footer_height;
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr;
+}
+
+.l-footer > *{
+    display:inline-block;
+    align-self: center;
+    justify-self: end;
+    color:#252525;
+    font-size:12px;
+    @include mediaquery(medium){
+        font-size:13px;
+    }
+}
